@@ -33,3 +33,24 @@ print (f'Mijn pizza bevat de volgende toppings: {toppings[0:]}')
 extra_topping = input('Welke topping wil je er nog extra bij hebben?\n')
 toppings.append(extra_topping)
 print (f'Mijn pizza bevat nu de volgende toppings: {toppings} ')
+
+# opdracht 4
+
+# Nu een moeilijke opdracht. Gebruik nogmaals de `input` functie. Vraag ditmaal welke topping de gebruiker niet
+# lekker vind. Probeer deze topping vervolgens te verwijderen uit je lijst.
+# Welke lijst.methode() gebruik je ook alweer om iets te verwijderen uit een lijst?
+# Let op, het kan ook een topping zijn die niet bestaat. Wat gebeurt er dan?
+
+# Zorg er dus voor dat je een `if statement` gebruikt, met het `in` keyword, om te controleren
+# of de opgegeven topping wel echt in de lijst staat. Alleen als dat zo is, dan kun je het
+# verwijderen en print je de toppings weer om het te bewijzen.
+
+# Als de gekozen topping niet in de lijst staat, print dan dat het niet in de lijst staat.
+
+topping_verwijderen = input ('Welke topping vind je niet lekker?\n')
+
+if topping_verwijderen in toppings:
+    toppings.remove(topping_verwijderen)
+    print(f'{topping_verwijderen} is verwijderd uit de lijst. De toppings zijn: {toppings}')
+else:
+    print(f'{topping_verwijderen} staat niet in de lijst. De toppings zijn: {toppings}')
